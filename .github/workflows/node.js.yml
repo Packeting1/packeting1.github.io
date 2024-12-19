@@ -2,9 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: 
+      - "main"  # 监听 main 分支的推送事件
 
 jobs:
   build:
@@ -30,7 +29,4 @@ jobs:
       with:
         token: ${{ secrets.TOKEN }}
         branch: gh-pages
-        folder: dist
-        
-env:
-  GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        folder: dist  # Angular 构建输出的文件夹
