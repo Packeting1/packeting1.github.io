@@ -1,9 +1,10 @@
-name: Deploy Angular to GitHub Pages
+name: Node.js CI
 
 on:
   push:
-    branches:
-      - main # 当推送到 main 分支时触发
+    branches: [ "gh-pages" ]
+  pull_request:
+    branches: [ "gh-pages" ]
 
 jobs:
   build:
