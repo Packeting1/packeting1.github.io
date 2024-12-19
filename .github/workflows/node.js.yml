@@ -22,11 +22,11 @@ jobs:
       run: npm install --legacy-peer-deps
 
     - name: Build Angular app
-      run: npm run build
+      run: ng build --output-path=dist/
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         token: ${{ secrets.TOKEN }}
         branch: gh-pages
-        folder: dist  # Angular 构建输出的文件夹
+        folder: dist/
