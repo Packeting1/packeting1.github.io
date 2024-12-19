@@ -22,11 +22,11 @@ jobs:
       run: npm install --legacy-peer-deps
 
     - name: Build Angular app
-      run: ng build --output-path=dist/
+      run: ng build
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         token: ${{ secrets.TOKEN }}
         branch: gh-pages
-        folder: dist/
+        folder: /
