@@ -29,3 +29,4 @@ jobs:
       with:
         token: ${{ secrets.TOKEN }}
         branch: gh-pages
+        folder: dist/angular-app
